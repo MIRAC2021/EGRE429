@@ -395,77 +395,46 @@ begin
 
 	-- Add user logic here
 	
-	 process (S_AXI_ARESETN, count, duty_cycle, slv_reg0, slv_reg1)
-        variable counter_en : std_logic; 
-    BEGIN
-        If (S_AXI_ARESETN = '0') then
-            duty_cycle <= X"0000_0000";
-            num_cycles <= X"0000_0000";
-            count <= X"0000_0000";
-        end if;
-        If not (duty_cycle = slv_reg0) then 
-            duty_cycle <= slv_reg0;
-            num_cycles <= X"0000_0000";
-            counter_en := '1';
-        end if;
-        
-        if(rising_edge(S_AXI_ACLK)) then 
-            If (count < duty_cycle) then 
-                pwm <= '1';
-            Else
-                pwm <= '0';
-            end if;
-            If (to_integer(unsigned(count)) = 100) then 
-                count <= X"0000_0000";
-                num_cycles <= std_logic_vector(unsigned(num_cycles) + 1);
-                if num_cycles = slv_reg1 then
-                    counter_en := '0';
-                else
-                    counter_en := '1';
-                end if;
-            end if;
-         end if;
-         
-    END PROCESS;
 	
     process(S_AXI_ACLK)
-        
     begin 
      if rising_edge(S_AXI_ACLK) then
-        if (S_AXI_ARESETN = '1') then
+        if (S_AXI_ARESETN = '0') then
            duty_cycle <= X"0000_0000";
-            num_cycles <= X"0000_0000";
-            count <= X"0000_0000";
+           num_cycles <= X"0000_0000";
+           count <= X"0000_0000";
         else
-        case the_mistate is
-	      when state1 =>
-	        count <= X"0000_0000";
-	        if not(duty_cycle = slv_reg0) then
-	           duty_cycle <= slv_reg0;
-	           num_cycles <= X"0000_0000";
-	           the_mistate <= state2; 
-	        end if;  
-	      when state2 =>
-	        if(count < duty_cycle) then
-	           pwm <= '1';
-	           count <= std_logic_vector(unsigned(count) + 1);
-	        elsif(count < "100") then
-	           pwm <= '0';
-	           count <= std_logic_vector(unsigned(count) + 1);
-	        elsif(num_cycles < slv_reg1) then
-	           count <= X"0000_0000";
-	           num_cycles <= std_logic_vector(unsigned(num_cycles) + 1);
-            end if;
-	      when others =>
-	        the_mistate  <= state1;
-	    end case; 
-        end if; 
-     
+            case the_mistate is
+              when state1 =>
+                count <= X"0000_0000";
+                if not(duty_cycle = slv_reg0) then
+                   duty_cycle <= slv_reg0;
+                   num_cycles <= X"0000_0001";
+                   the_mistate <= state2; 
+                end if; 
+                 
+              when state2 =>
+                if(count < duty_cycle) then
+                   pwm <= '1';
+                   count <= std_logic_vector(unsigned(count) + 1);
+                   
+                elsif(to_integer(unsigned(count)) < 100) then
+                   pwm <= '0';
+                   count <= std_logic_vector(unsigned(count) + 1);
+                   
+                elsif(num_cycles < slv_reg1) then
+                   count <= X"0000_0000";
+                   num_cycles <= std_logic_vector(unsigned(num_cycles) + 1);
+                else 
+                    the_mistate <= state1; 
+                end if;
+            end case; 
+         end if; 
      end if;
+         
     
     end process;
-    
-    PWMout <= pwm; 
+    PWMout <= pwm;
 	-- User logic ends
 
 end arch_imp;

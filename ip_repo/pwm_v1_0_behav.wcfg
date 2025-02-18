@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="pwm_v1_0_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="pwm_v1_0" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="290.000001 us"></ZoomEndTime>
+      <Cursor1Time time="33.500000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="139"></NameColumnWidth>
+      <ValueColumnWidth column_width="82"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="31" />
+   <wvobject fp_name="/pwm_v1_0/PWMout" type="logic">
+      <obj_property name="ElementShortName">PWMout</obj_property>
+      <obj_property name="ObjectShortName">PWMout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_aclk" type="logic">
+      <obj_property name="ElementShortName">s00_axi_aclk</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_aresetn" type="logic">
+      <obj_property name="ElementShortName">s00_axi_aresetn</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_aresetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_awaddr" type="array">
+      <obj_property name="ElementShortName">s00_axi_awaddr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_awaddr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_awprot" type="array">
+      <obj_property name="ElementShortName">s00_axi_awprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_awprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_awvalid" type="logic">
+      <obj_property name="ElementShortName">s00_axi_awvalid</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_awvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_awready" type="logic">
+      <obj_property name="ElementShortName">s00_axi_awready</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_awready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_wdata" type="array">
+      <obj_property name="ElementShortName">s00_axi_wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_wstrb" type="array">
+      <obj_property name="ElementShortName">s00_axi_wstrb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_wstrb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_wvalid" type="logic">
+      <obj_property name="ElementShortName">s00_axi_wvalid</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_wvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_wready" type="logic">
+      <obj_property name="ElementShortName">s00_axi_wready</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_wready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_bresp" type="array">
+      <obj_property name="ElementShortName">s00_axi_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_bvalid" type="logic">
+      <obj_property name="ElementShortName">s00_axi_bvalid</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_bvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_bready" type="logic">
+      <obj_property name="ElementShortName">s00_axi_bready</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_bready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_araddr" type="array">
+      <obj_property name="ElementShortName">s00_axi_araddr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_araddr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_arprot" type="array">
+      <obj_property name="ElementShortName">s00_axi_arprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_arprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_arvalid" type="logic">
+      <obj_property name="ElementShortName">s00_axi_arvalid</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_arvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_arready" type="logic">
+      <obj_property name="ElementShortName">s00_axi_arready</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_arready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_rdata" type="array">
+      <obj_property name="ElementShortName">s00_axi_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_rresp" type="array">
+      <obj_property name="ElementShortName">s00_axi_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_rvalid" type="logic">
+      <obj_property name="ElementShortName">s00_axi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_rvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/s00_axi_rready" type="logic">
+      <obj_property name="ElementShortName">s00_axi_rready</obj_property>
+      <obj_property name="ObjectShortName">s00_axi_rready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/C_S00_AXI_DATA_WIDTH" type="other">
+      <obj_property name="ElementShortName">C_S00_AXI_DATA_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">C_S00_AXI_DATA_WIDTH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/C_S00_AXI_ADDR_WIDTH" type="other">
+      <obj_property name="ElementShortName">C_S00_AXI_ADDR_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">C_S00_AXI_ADDR_WIDTH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/pwm_v1_0_S00_AXI_inst/slv_reg0" type="array">
+      <obj_property name="ElementShortName">slv_reg0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/pwm_v1_0_S00_AXI_inst/slv_reg1" type="array">
+      <obj_property name="ElementShortName">slv_reg1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/pwm_v1_0_S00_AXI_inst/pwm" type="logic">
+      <obj_property name="ElementShortName">pwm</obj_property>
+      <obj_property name="ObjectShortName">pwm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/pwm_v1_0_S00_AXI_inst/the_mistate" type="other">
+      <obj_property name="ElementShortName">the_mistate</obj_property>
+      <obj_property name="ObjectShortName">the_mistate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/pwm_v1_0_S00_AXI_inst/duty_cycle" type="array">
+      <obj_property name="ElementShortName">duty_cycle[31:0]</obj_property>
+      <obj_property name="ObjectShortName">duty_cycle[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/pwm_v1_0_S00_AXI_inst/num_cycles" type="array">
+      <obj_property name="ElementShortName">num_cycles[31:0]</obj_property>
+      <obj_property name="ObjectShortName">num_cycles[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/pwm_v1_0/pwm_v1_0_S00_AXI_inst/count" type="array">
+      <obj_property name="ElementShortName">count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
