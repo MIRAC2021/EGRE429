@@ -1,0 +1,11 @@
+<pragmas>
+<pragma file="EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp" line="108" pragmaType="pipeline" parentfunction="mmult" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp" line="87" pragmaType="pipeline" parentfunction="mmult" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp" line="22" pragmaType="interface" parentfunction="mmult" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp" line="23" pragmaType="interface" parentfunction="mmult" mode="m_axi" port="output" bundle="" offset="slave" name="" depth="256" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="256" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp" line="29" pragmaType="array_partition" parentfunction="mmult" dim="1" factor="0" mode="complete" dynamic="0" variable="localA"/>
+<pragma file="EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp" line="30" pragmaType="bind_storage" parentfunction="mmult" op="666" impl="38" latency="-1" variable="localA"/>
+<pragma file="EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp" line="36" pragmaType="array_partition" parentfunction="mmult" dim="2" factor="0" mode="complete" dynamic="0" variable="localB"/>
+<pragma file="EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp" line="37" pragmaType="bind_storage" parentfunction="mmult" op="666" impl="38" latency="-1" variable="localB"/>
+<pragma file="EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp" line="41" pragmaType="array_partition" parentfunction="mmult" dim="0" factor="0" mode="complete" dynamic="0" variable="localC"/>
+</pragmas>

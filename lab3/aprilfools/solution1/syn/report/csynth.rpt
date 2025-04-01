@@ -1,0 +1,159 @@
+
+
+================================================================
+== Synthesis Summary Report of 'mmult'
+================================================================
++ General Information: 
+    * Date:           Tue Mar 18 13:45:43 2025
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        aprilfools
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z010-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+------------+-----+
+    |  Modules  | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |    |           |            |     |
+    |  & Loops  | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF    |     LUT    | URAM|
+    +-----------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+------------+-----+
+    |+ mmult    |     -|  0.00|      108|  1.080e+03|         -|      109|     -|        no|  10 (8%)|   -|  1169 (3%)|  1849 (10%)|    -|
+    | o writeC  |     -|  8.75|      106|  1.060e+03|         8|        1|   100|       yes|        -|   -|          -|           -|    -|
+    +-----------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 256          | 16          | 16          | BRAM=10           |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 5             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register   | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL       | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER       | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER     | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR     | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | output_r_1 | 0x10   | 32    | W      | Data signal of output_r          |                                                                      |
+| s_axi_control | output_r_2 | 0x14   | 32    | W      | Data signal of output_r          |                                                                      |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| output   | out       | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+
+| Argument | HW Interface  | HW Type   | HW Usage |
++----------+---------------+-----------+----------+
+| output   | m_axi_gmem    | interface |          |
+| output   | s_axi_control | interface | offset   |
++----------+---------------+-----------+----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+--------+----------------------------------------------+
+| HW Interface | Direction | Length | Width | Loop   | Loop Location                                |
++--------------+-----------+--------+-------+--------+----------------------------------------------+
+| m_axi_gmem   | write     | 100    | 32    | writeC | EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:107:10 |
++--------------+-----------+--------+-------+--------+----------------------------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+----------------------------------------------+-----------+--------------+--------+--------+----------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location                              | Direction | Burst Status | Length | Loop   | Loop Location                                | Resolution | Problem                                                                                               |
++--------------+----------+----------------------------------------------+-----------+--------------+--------+--------+----------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| m_axi_gmem   | output   | EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:110:16 | write     | Widen Fail   |        | writeC | EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:107:10 | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | output   | EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:110:16 | write     | Inferred     | 100    | writeC | EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:107:10 |            |                                                                                                       |
++--------------+----------+----------------------------------------------+-----------+--------------+--------+--------+----------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------+-----+--------+-----------+-----+--------+---------+
+| Name                  | DSP | Pragma | Variable  | Op  | Impl   | Latency |
++-----------------------+-----+--------+-----------+-----+--------+---------+
+| + mmult               | 0   |        |           |     |        |         |
+|   add_ln107_fu_379_p2 |     |        | add_ln107 | add | fabric | 0       |
+|   add_ln109_fu_428_p2 |     |        | add_ln109 | add | fabric | 0       |
+|   j_2_fu_1002_p2      |     |        | j_2       | add | fabric | 0       |
++-----------------------+-----+--------+-----------+-----+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name              | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                   |           |           |      |      |        |          |      |         | Banks            |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + mmult           |           |           | 10   | 0    |        |          |      |         |                  |
+|   control_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
+|   gmem_m_axi_U    | interface | m_axi     | 10   |      |        |          |      |         |                  |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+----------------------------------+-----------------------------------------------------------+----------------------------------------------------------------------------+
+| Type     | Options                          | Location                                                  | Messages                                                                   |
++----------+----------------------------------+-----------------------------------------------------------+----------------------------------------------------------------------------+
+| resource | variable=localA core=ROM_nP_BRAM | EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:30 in mmult, localA | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
+| resource | variable=localB core=ROM_nP_BRAM | EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:37 in mmult, localB | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
++----------+----------------------------------+-----------------------------------------------------------+----------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+---------------------------------------------------------------------+-----------------------------------------------------------+
+| Type            | Options                                                             | Location                                                  |
++-----------------+---------------------------------------------------------------------+-----------------------------------------------------------+
+| interface       | s_axilite port=return                                               | EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:22 in mmult, return |
+| interface       | m_axi depth=256 port=output offset=slave max_write_burst_length=256 | EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:23 in mmult, output |
+| array_partition | dim=1 type=complete variable=localA                                 | EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:29 in mmult, localA |
+| array_partition | dim=2 type=complete variable=localB                                 | EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:36 in mmult, localB |
+| array_partition | dim=0 type=complete variable=localC                                 | EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:41 in mmult, localC |
+| pipeline        |                                                                     | EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:87 in mmult         |
+| pipeline        |                                                                     | EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:108 in mmult        |
++-----------------+---------------------------------------------------------------------+-----------------------------------------------------------+
+
+

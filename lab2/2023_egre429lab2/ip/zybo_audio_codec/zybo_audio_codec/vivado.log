@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Feb 28 19:07:04 2021
+# Process ID: 556
+# Current directory: E:/vcu/egre429/labs/Blackboard/ip_repo/ip_repo/zybo_audio_codec
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10520 E:\vcu\egre429\labs\Blackboard\ip_repo\ip_repo\zybo_audio_codec\zybo_audio_codec.xpr
+# Log file: E:/vcu/egre429/labs/Blackboard/ip_repo/ip_repo/zybo_audio_codec/vivado.log
+# Journal file: E:/vcu/egre429/labs/Blackboard/ip_repo/ip_repo/zybo_audio_codec\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/vcu/egre429/labs/Blackboard/ip_repo/ip_repo/zybo_audio_codec/zybo_audio_codec.xpr
+INFO: [Project 1-313] Project file moved from 'C:/xup/hls/labs/lab4/zybo_audio_codec' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [Project 1-230] Project 'zybo_audio_codec.xpr' upgraded for this version of Vivado.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file E:/vcu/egre429/labs/Blackboard/ip_repo/ip_repo/zybo_audio_codec/component.xml
+set_property base_address 0x4000_0000 [ipx::get_address_blocks reg0 -of_objects [ipx::get_memory_maps S_AXI -of_objects [ipx::current_core]]]
+CRITICAL WARNING: [IP_Flow 19-1730] Address Block 'reg0': Invalid addressBlock base address value "0x4000_0000".  The value must be a scaled non-negative integer.
+set_property range 65536 [ipx::get_address_blocks reg0 -of_objects [ipx::get_memory_maps S_AXI -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property  ip_repo_paths  e:/vcu/egre429/labs/Blackboard/ip_repo/ip_repo/zybo_audio_codec [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/vcu/egre429/labs/Blackboard/ip_repo/ip_repo/zybo_audio_codec'.
+set_property range 65536 [ipx::get_address_blocks reg0 -of_objects [ipx::get_memory_maps S_AXI -of_objects [ipx::current_core]]]
+set_property core_revision 3 [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path e:/vcu/egre429/labs/Blackboard/ip_repo/ip_repo/zybo_audio_codec
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'e:/vcu/egre429/labs/Blackboard/ip_repo/ip_repo/zybo_audio_codec'
+set_property range 65536 [ipx::get_address_blocks reg0 -of_objects [ipx::get_memory_maps S_AXI -of_objects [ipx::current_core]]]
+set_property core_revision 4 [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path e:/vcu/egre429/labs/Blackboard/ip_repo/ip_repo/zybo_audio_codec
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'e:/vcu/egre429/labs/Blackboard/ip_repo/ip_repo/zybo_audio_codec'
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 28 19:10:36 2021...

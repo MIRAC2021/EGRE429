@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="aprilfools" solutionName="solution1" date="2025-03-18T13:45:43.643-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5536] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:37:9)" projectName="aprilfools" solutionName="solution1" date="2025-03-18T13:45:34.424-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5536] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:30:9)" projectName="aprilfools" solutionName="solution1" date="2025-03-18T13:45:32.878-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'matdata.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="aprilfools" solutionName="solution1" date="2025-03-18T13:45:31.252-0400" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

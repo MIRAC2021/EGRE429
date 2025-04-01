@@ -1,0 +1,33 @@
+C:/Users/chopram/Downloads/aprilfools/solution1/csynth.tcl:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=mmult_XLX_SEP_ PragmaOptions=name=mmult_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=mmult
+        ^
+EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:22:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mmult_XLX_SEP_ PragmaOptions=s_axilite port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return
+        ^
+EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:23:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mmult_XLX_SEP_ PragmaOptions=m_axi depth=256 port=output offset=slave max_write_burst_length=256_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=256 port=output offset=slave max_write_burst_length=256
+        ^
+EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:29:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mmult_XLX_SEP_ PragmaOptions=dim=1 type=complete variable=localA_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION dim=1 type=complete variable=localA
+        ^
+EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:30:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=localA core=ROM_nP_BRAM
+        ^
+EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:30:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mmult_XLX_SEP_ PragmaOptions=variable=localA core=ROM_nP_BRAM_XLX_SEP_ [-Wdump-hls-pragmas]
+EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:36:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mmult_XLX_SEP_ PragmaOptions=dim=2 type=complete variable=localB_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION dim=2 type=complete variable=localB
+        ^
+EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:37:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=localB core=ROM_nP_BRAM
+        ^
+EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:37:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mmult_XLX_SEP_ PragmaOptions=variable=localB core=ROM_nP_BRAM_XLX_SEP_ [-Wdump-hls-pragmas]
+EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:41:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mmult_XLX_SEP_ PragmaOptions=dim=0 type=complete variable=localC_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION dim=0 type=complete variable=localC
+        ^
+EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:87:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mmult_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:108:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mmult_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+12 warnings generated.

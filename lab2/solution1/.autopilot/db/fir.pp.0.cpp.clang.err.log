@@ -1,0 +1,16 @@
+H:/EGRE429/lab2/solution1/csynth.tcl:16:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=name=fir_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=fir
+        ^
+C:/Users/chopram/Downloads/2023_egre429lab2/2023_egre429lab2/hls/fir.cpp:4:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=fir_io port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=fir_io port=return
+        ^
+C:/Users/chopram/Downloads/2023_egre429lab2/2023_egre429lab2/hls/fir.cpp:5:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=fir_io port=data_out_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=fir_io port=data_out
+        ^
+C:/Users/chopram/Downloads/2023_egre429lab2/2023_egre429lab2/hls/fir.cpp:6:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=fir_io port=data_in_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=fir_io port=data_in
+        ^
+C:/Users/chopram/Downloads/2023_egre429lab2/2023_egre429lab2/hls/fir.cpp:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+5 warnings generated.

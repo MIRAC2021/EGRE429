@@ -1,0 +1,2 @@
+arm-none-eabi-ar qc libfir.a CMakeFiles/fir.dir/xfir.c.obj CMakeFiles/fir.dir/xfir_sinit.c.obj CMakeFiles/fir.dir/xfir_linux.c.obj CMakeFiles/fir.dir/xfir_g.c.obj
+C:/Xilinx/Vitis/2023.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-ranlib.exe libfir.a

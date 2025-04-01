@@ -1,0 +1,7 @@
+EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:30:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=localA core=ROM_nP_BRAM
+        ^
+EGRE429Lab3/EGRE429Lab3/hls/mmult.cpp:37:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=localB core=ROM_nP_BRAM
+        ^
+2 warnings generated.

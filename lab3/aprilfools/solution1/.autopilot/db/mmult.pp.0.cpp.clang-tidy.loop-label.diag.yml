@@ -1,0 +1,14 @@
+---
+MainSourceFile:  'C:/Users/chopram/Downloads/aprilfools/solution1/.autopilot/db/mmult.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: ROM_nP_BRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      30
+    FilePath:        'C:\Users\chopram\Downloads\EGRE429Lab3\EGRE429Lab3\hls\mmult.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: ROM_nP_BRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      37
+    FilePath:        'C:\Users\chopram\Downloads\EGRE429Lab3\EGRE429Lab3\hls\mmult.cpp'
+    Replacements:    
+...

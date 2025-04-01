@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="matdata.dat" path="C:\Users\chopram\Downloads\EGRE429Lab3\EGRE429Lab3\hls\matdata.dat"/>
+    <originFiles name="mmult.cpp" path="C:\Users\chopram\Downloads\EGRE429Lab3\EGRE429Lab3\hls\mmult.cpp"/>
+    <originFiles name="mmult.h" path="C:\Users\chopram\Downloads\EGRE429Lab3\EGRE429Lab3\hls\mmult.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

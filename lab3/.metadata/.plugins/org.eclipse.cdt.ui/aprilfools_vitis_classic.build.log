@@ -1,0 +1,46 @@
+15:34:28 **** Incremental Build of configuration Debug for project aprilfools_vitis_classic ****
+make all 
+C:/Xilinx/Vitis/2023.2/gnuwin/bin/make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+C:/Xilinx/Vitis/2023.2/gnuwin/bin/make --no-print-directory main-build
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/chopram/Downloads/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:90:28: warning: assignment to 'u32 *' {aka 'long unsigned int *'} from 'UINTPTR' {aka 'unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   90 |         XMmultOutputMatrix = XBramInfo->MemBaseAddress;
+      |                            ^
+../src/main.c:126:46: warning: passing argument 2 of 'XMmult_Set_output_r' makes integer from pointer without a cast [-Wint-conversion]
+  126 |         XMmult_Set_output_r(&XMmultInstance, XMmultOutputMatrix);
+      |                                              ^~~~~~~~~~~~~~~~~~
+      |                                              |
+      |                                              u32 * {aka long unsigned int *}
+In file included from ../src/main.c:9:
+C:/Users/chopram/Downloads/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xmmult.h:102:51: note: expected 'u64' {aka 'long long unsigned int'} but argument is of type 'u32 *' {aka 'long unsigned int *'}
+  102 | void XMmult_Set_output_r(XMmult *InstancePtr, u64 Data);
+      |                                               ~~~~^~~~
+../src/main.c:176:24: warning: passing argument 1 of 'software_mmult' from incompatible pointer type [-Wincompatible-pointer-types]
+  176 |         software_mmult(input_matrix);
+      |                        ^~~~~~~~~~~~
+      |                        |
+      |                        u32 (*)[10] {aka long unsigned int (*)[10]}
+../src/main.c:43:27: note: expected 'u32 **' {aka 'long unsigned int **'} but argument is of type 'u32 (*)[10]' {aka 'long unsigned int (*)[10]'}
+   43 | void software_mmult(u32** input){
+      |                     ~~~~~~^~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: aprilfools_vitis_classic.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/chopram/Downloads/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "aprilfools_vitis_classic.elf"  ./src/main.o ./src/timer.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: aprilfools_vitis_classic.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size aprilfools_vitis_classic.elf  |tee "aprilfools_vitis_classic.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  55071	   2648	  22664	  80383	  139ff	aprilfools_vitis_classic.elf
+'Finished building: aprilfools_vitis_classic.elf.size'
+' '
+
+15:34:30 Build Finished (took 1s.329ms)
+

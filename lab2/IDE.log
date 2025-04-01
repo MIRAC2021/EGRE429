@@ -1,0 +1,116 @@
+15:18:52 DEBUG : Logs will be stored at 'H:/EGRE429/lab2/IDE.log'.
+15:19:26 INFO  : Registering command handlers for Vitis TCF services
+15:19:26 INFO  : Launching XSCT server: xsct.bat -n  -interactive H:\EGRE429\lab2\temp_xsdb_launch_script.tcl
+15:19:27 INFO  : Platform repository initialization has completed.
+15:19:31 INFO  : XSCT server has started successfully.
+15:19:34 INFO  : Successfully done setting XSCT server connection channel  
+15:19:35 INFO  : plnx-install-location is set to ''
+15:19:35 INFO  : Successfully done query RDI_DATADIR 
+15:19:35 INFO  : Successfully done setting workspace for the tool. 
+15:23:48 INFO  : Result from executing command 'getProjects': design_1_wrapper_classic
+15:23:48 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_202320_1/xilinx_vck190_base_202320_1.xpfm;xilinx_vck190_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_dfx_202320_1/xilinx_vck190_base_dfx_202320_1.xpfm;xilinx_vek280_es1_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vek280_es1_base_202320_1/xilinx_vek280_es1_base_202320_1.xpfm;xilinx_vmk180_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vmk180_base_202320_1/xilinx_vmk180_base_202320_1.xpfm;xilinx_zcu102_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_202320_1/xilinx_zcu102_base_202320_1.xpfm;xilinx_zcu102_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_dfx_202320_1/xilinx_zcu102_base_dfx_202320_1.xpfm;xilinx_zcu104_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu104_base_202320_1/xilinx_zcu104_base_202320_1.xpfm
+15:23:50 WARN  : An unexpected exception occurred in the module 'platform project logging'
+15:23:54 INFO  : Platform 'design_1_wrapper_classic' is added to custom repositories.
+15:24:07 INFO  : Platform 'design_1_wrapper_classic' is added to custom repositories.
+15:28:07 INFO  : Result from executing command 'getProjects': design_1_wrapper_classic
+15:28:07 INFO  : Result from executing command 'getPlatforms': design_1_wrapper_classic|H:/EGRE429/lab2/design_1_wrapper_classic/export/design_1_wrapper_classic/design_1_wrapper_classic.xpfm;xilinx_vck190_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_202320_1/xilinx_vck190_base_202320_1.xpfm;xilinx_vck190_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vck190_base_dfx_202320_1/xilinx_vck190_base_dfx_202320_1.xpfm;xilinx_vek280_es1_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vek280_es1_base_202320_1/xilinx_vek280_es1_base_202320_1.xpfm;xilinx_vmk180_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_vmk180_base_202320_1/xilinx_vmk180_base_202320_1.xpfm;xilinx_zcu102_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_202320_1/xilinx_zcu102_base_202320_1.xpfm;xilinx_zcu102_base_dfx_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu102_base_dfx_202320_1/xilinx_zcu102_base_dfx_202320_1.xpfm;xilinx_zcu104_base_202320_1|C:/Xilinx/Vitis/2023.2/base_platforms/xilinx_zcu104_base_202320_1/xilinx_zcu104_base_202320_1.xpfm
+15:28:11 INFO  : Checking for BSP changes to sync application flags for project 'Project_Classic'...
+15:34:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:34:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AB701AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351AB701AA-13722093-0"}' command is executed.
+15:34:33 INFO  : Device configured successfully with "H:/EGRE429/lab2/Project_Classic/_ide/bitstream/design_1_wrapper_classic.bit"
+15:35:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:35:24 INFO  : Jtag cable 'Digilent Zybo Z7 210351AB701AA' is selected.
+15:35:24 INFO  : 'jtag frequency' command is executed.
+15:35:24 INFO  : Context for 'APU' is selected.
+15:35:24 INFO  : System reset is completed.
+15:35:27 INFO  : 'after 3000' command is executed.
+15:35:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AB701AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351AB701AA-13722093-0"}' command is executed.
+15:35:28 INFO  : Device configured successfully with "H:/EGRE429/lab2/Project_Classic/_ide/bitstream/design_1_wrapper_classic.bit"
+15:35:28 INFO  : Context for 'APU' is selected.
+15:35:28 INFO  : Hardware design and registers information is loaded from 'H:/EGRE429/lab2/design_1_wrapper_classic/export/design_1_wrapper_classic/hw/design_1_wrapper_classic.xsa'.
+15:35:28 INFO  : 'configparams force-mem-access 1' command is executed.
+15:35:28 INFO  : Context for 'APU' is selected.
+15:35:28 INFO  : Sourcing of 'H:/EGRE429/lab2/Project_Classic/_ide/psinit/ps7_init.tcl' is done.
+15:35:29 INFO  : 'ps7_init' command is executed.
+15:35:29 INFO  : 'ps7_post_config' command is executed.
+15:35:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:35:29 INFO  : The application 'H:/EGRE429/lab2/Project_Classic/Debug/Project_Classic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:35:29 INFO  : 'configparams force-mem-access 0' command is executed.
+15:35:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AB701AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351AB701AA-13722093-0"}
+fpga -file H:/EGRE429/lab2/Project_Classic/_ide/bitstream/design_1_wrapper_classic.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw H:/EGRE429/lab2/design_1_wrapper_classic/export/design_1_wrapper_classic/hw/design_1_wrapper_classic.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source H:/EGRE429/lab2/Project_Classic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow H:/EGRE429/lab2/Project_Classic/Debug/Project_Classic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:35:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:35:29 INFO  : 'con' command is executed.
+15:35:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:35:29 INFO  : Launch script is exported to file 'H:\EGRE429\lab2\Project_Classic_system\_ide\scripts\debugger_project_classic-default.tcl'
+15:36:34 INFO  : Launching XSCT server: xsct.bat -n  -interactive H:\EGRE429\lab2\temp_xsdb_launch_script.tcl
+15:36:47 INFO  : XSCT server has started successfully.
+15:37:06 WARN  : channel "tcfchan#2" closed
+15:39:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:39:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AB701AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351AB701AA-13722093-0"}' command is executed.
+15:39:25 INFO  : Device configured successfully with "H:/EGRE429/lab2/Project_Classic/_ide/bitstream/design_1_wrapper_classic.bit"
+15:39:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:39:40 INFO  : Jtag cable 'Digilent Zybo Z7 210351AB701AA' is selected.
+15:39:40 INFO  : 'jtag frequency' command is executed.
+15:39:40 INFO  : Context for 'APU' is selected.
+15:39:40 INFO  : System reset is completed.
+15:39:43 INFO  : 'after 3000' command is executed.
+15:39:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AB701AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351AB701AA-13722093-0"}' command is executed.
+15:39:44 INFO  : Device configured successfully with "H:/EGRE429/lab2/Project_Classic/_ide/bitstream/design_1_wrapper_classic.bit"
+15:39:44 INFO  : Context for 'APU' is selected.
+15:39:45 INFO  : Hardware design and registers information is loaded from 'H:/EGRE429/lab2/design_1_wrapper_classic/export/design_1_wrapper_classic/hw/design_1_wrapper_classic.xsa'.
+15:39:45 INFO  : 'configparams force-mem-access 1' command is executed.
+15:39:45 INFO  : Context for 'APU' is selected.
+15:39:45 INFO  : Sourcing of 'H:/EGRE429/lab2/Project_Classic/_ide/psinit/ps7_init.tcl' is done.
+15:39:45 INFO  : 'ps7_init' command is executed.
+15:39:45 INFO  : 'ps7_post_config' command is executed.
+15:39:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:39:45 INFO  : The application 'H:/EGRE429/lab2/Project_Classic/Debug/Project_Classic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:39:45 INFO  : 'configparams force-mem-access 0' command is executed.
+15:39:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AB701AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351AB701AA-13722093-0"}
+fpga -file H:/EGRE429/lab2/Project_Classic/_ide/bitstream/design_1_wrapper_classic.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw H:/EGRE429/lab2/design_1_wrapper_classic/export/design_1_wrapper_classic/hw/design_1_wrapper_classic.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source H:/EGRE429/lab2/Project_Classic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow H:/EGRE429/lab2/Project_Classic/Debug/Project_Classic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:39:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:39:46 INFO  : 'con' command is executed.
+15:39:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:39:46 INFO  : Launch script is exported to file 'H:\EGRE429\lab2\Project_Classic_system\_ide\scripts\debugger_project_classic-default.tcl'

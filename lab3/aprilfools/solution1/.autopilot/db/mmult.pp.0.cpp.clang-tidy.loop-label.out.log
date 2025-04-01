@@ -1,0 +1,6 @@
+C:\Users\chopram\Downloads\aprilfools\solution1\.autopilot\db\mmult.pp.0.cpp:193:9: error: Resource with core_name: ROM_nP_BRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable=localA core=ROM_nP_BRAM
+        ^
+C:\Users\chopram\Downloads\aprilfools\solution1\.autopilot\db\mmult.pp.0.cpp:212:9: error: Resource with core_name: ROM_nP_BRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable=localB core=ROM_nP_BRAM
+        ^

@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "fir",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "fir"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "H:/EGRE429/lab2/solution1/csynth.tcl",
+    "sourceLine": 16,
+    "success": true
+  }
+]
